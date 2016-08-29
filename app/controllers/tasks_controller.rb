@@ -71,6 +71,20 @@ class TasksController < ApplicationController
       format.html { redirect_to tasks_path, notice: "Task status successfully changed"}
     end
   end
+  class PagesController < ApplicationController
+  def home
+    if current_user
+      redirect_to tasks_path
+    end
+  end
+
+  def about
+  end
+
+  def test
+  end
+end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
